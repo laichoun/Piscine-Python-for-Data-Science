@@ -30,5 +30,19 @@ match operation:
 		print("impossible operator does not exist")
 
 print(result)
-	
+
+
+
+# private test : 
+plateformes_sociales = {"Facebook" : "fb", "Instagram" : "insta", "Snapchat" : "snap", "Twitter" : "tweet", 12 : 120}
+print(plateformes_sociales)
+print (plateformes_sociales.keys())
+print (plateformes_sociales.values())
+print (plateformes_sociales.items())
+print (plateformes_sociales.get("Instagram"))
+# print (plateformes_sociales.pop("11"))
+print (plateformes_sociales.pop(12))
+print(plateformes_sociales)
+print (plateformes_sociales.clear())
+print(plateformes_sociales)
 
