@@ -63,12 +63,7 @@ def main():
         elif (len(sys.argv) == 2):
             arg = sys.argv[1]
             dicCount = calculationSumChar(arg)
-            print(f"The text contains {len(arg)} characters:")
-            print(f"{dicCount['countUpCase']} upper letters")
-            print(f"{dicCount['countLowerCase']} lower letters")
-            print(f"{dicCount['countPunctuation']} punctuation marks")
-            print(f"{dicCount['countSpace']} spaces")
-            print(f"{dicCount['countDigit']} digits")
+            printMessage(dicCount, arg)
         else:
             # arg = input ("What is the text to count?\n") + " "
             print("What is the text to count?")
