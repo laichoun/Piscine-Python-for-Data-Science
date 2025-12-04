@@ -4,6 +4,12 @@ import sys
 
 
 def listOfWords(s, n):
+    """
+    This function is not used it was only pedagogical
+    This function takes 2 arg : the string and the length to compare to.
+    It returns a list filtered with words that have a length higher than
+    the n put as argument
+    """
     result = []
     result = [item for item in s if (len(item) > n)]
     # for item in s:
@@ -13,6 +19,11 @@ def listOfWords(s, n):
 
 
 def main():
+    """
+    This function checks the number of arguments put.
+    Thanks to a List Comprehension I can easily filter what is needed.
+    The lambda function is an anonymous function
+    """
     try:
         if (len(sys.argv) != 3):
             raise AssertionError
