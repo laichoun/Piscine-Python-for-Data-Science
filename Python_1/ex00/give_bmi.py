@@ -23,7 +23,7 @@ def checkArgs(height, weight) -> int:
     if (len(height) != len(weight)):
         raise ValueError("Length are not the same.")
     for x in height:
-        if (isinstance(x, int) or isinstance(x, float)):
+        if ((isinstance(x, int) or isinstance(x, float)) and not isinstance(x, bool)):
             continue
         else:
             raise ValueError("Error, not a list of int or float.")
@@ -67,7 +67,7 @@ def main():
 
     try:
         height = [2.71, 1.15, True]
-        weight = [165.3, 38.4]
+        weight = [165.3, 38.4, 0]
 
         bmi = give_bmi(height, weight)
         print(bmi, type(bmi))
