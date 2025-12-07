@@ -9,13 +9,10 @@ def checkArg(family: list):
     if (type(family) is list):
         for item in family:
             if (len(item) != length0):
-                raise ValueError("ValueError: Length nok")
+                raise ValueError("ValueError: Must have the same length")
             for i in item:
-                if ((isinstance(i, int) or isinstance(i, float)) and not
-                        isinstance(i, bool)):
-                    continue
-                else:
-                    raise ValueError("ValueError: Not the correct value type")
+                if (type(i) not in (int, float)):
+                    raise ValueError("ValueError: Only int or float allowed")
     else:
         raise TypeError("TypeError: not a list")
 
@@ -27,8 +24,13 @@ def slice_me(family: list, start: int, end: int) -> list:
     print(f"My shape is : ({rows}, {line})")
 
     newShape = slice(start, end)
-    newShapeRows = np.size(family[newShape], 0)
-    newShapeLine = np.size(family[newShape], 1)
+
+    if (len(family[newShape]) == 0):
+        newShapeRows = 0
+        newShapeLine = 0
+    else:
+        newShapeRows = np.size(family[newShape], 0)
+        newShapeLine = np.size(family[newShape], 1)
     print(f"My new shape is : ({newShapeRows}, {newShapeLine})")
     return family[newShape]
 
@@ -60,11 +62,11 @@ def main():
         print(e)
     try:
         family = [[1.80, 78.4],
-                  [2.15, 87, 98],
+                  [2.15, 87],
                   [2.10, 98.5],
                   [1.88, 75.2]]
         print(slice_me(family, 0, 2))
-        print(slice_me(family, 1, -2))
+        print(slice_me(family, 2, -2))
 
     except TypeError as e:
         print(e)
