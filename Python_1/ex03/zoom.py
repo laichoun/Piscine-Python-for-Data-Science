@@ -1,25 +1,23 @@
 from load_image import ft_load
-from PIL import Image
-import numpy as np
+import matplotlib.pyplot as plt
+
 
 def zoom():
     arr = ft_load("animal.jpeg")
     print(arr)
-    img = Image.open("animal.jpeg").convert('L')
-    arr2 = np.array(img)
     ySlice = slice(100, 500)
     xSlice = slice(450, 850)
-    cSlice = slice(0,1)
-    zoomed2=arr2[ySlice, xSlice]
-    
-    
+    # 1 canal
+    cSlice = slice(0, 1)
     zoomed = arr[ySlice, xSlice, cSlice]
-    print(f"New shape after slicing: {zoomed.shape} or {zoomed2.shape}")
+    zoomed_gray = zoomed[:, :, 0]
+    # remove the last dimension no canal, usefull for grayscale
+    print(f"New shape after slicing: {zoomed.shape} or {zoomed_gray.shape}")
     print(zoomed)
 
-    zoomed=arr2[ySlice, xSlice]
-    img = Image.fromarray(zoomed)
-    img.show()
+    plt.imshow(zoomed_gray, cmap="gray")
+    # plt.colorbar()
+    plt.show()
 
 
 def main():
