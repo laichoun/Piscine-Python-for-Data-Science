@@ -2,6 +2,12 @@ import numpy as np
 
 
 def checkArg(family: list):
+    """
+    Docstring for checkArg
+
+    :param family: Description
+    :type family: list
+    """
     length = len(family)
     if (length == 0):
         raise ValueError("Family empty")
@@ -18,6 +24,30 @@ def checkArg(family: list):
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    """
+    Docstring for slice_me
+
+    :param family: Description
+    :type family: list
+    :param start: Description
+    :type start: int
+    :param end: Description
+    :type end: int
+    :return: Description
+    :rtype: list
+
+    slice (start,end step): returns a slice object
+        * START : Optional. An integer number specifying at
+        which position to start the slicing. Default is 0
+
+        *END : An int nb specifying at which pos to end the
+        slicing(excluded)
+
+        *STEP: Optional. An int nb specifying the step of the
+        slicing. Default is 1
+
+
+    """
     checkArg(family)
     rows = np.size(family, 0)
     line = np.size(family, 1)

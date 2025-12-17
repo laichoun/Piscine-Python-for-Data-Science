@@ -16,7 +16,7 @@ ou on peut utiliser la fonction format(y, ".2e")
 
 y = time.time()
 
-print(f"Seconds since January 1, 1970: {y:,}", f"or {y:.2e} in scientific notation")
+print(f"Seconds since January 1, 1970: {y:,.4f}", f"or {y:.2e} in scientific notation")
 
 #print("Seconds since January 1, 1970:", y, "or" , format(y, ".2e"), "in scientific notation")
 
