@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 from load_image import ft_load
+import numpy as np
 
-array = []
 
-def ft_invert(array) -> array:
+def ft_invert(array) -> np.ndarray:
     """Inverts the color of the image received."""
     invertArr = array.copy()
     invertArr[:, :, 0] = 255 - array[:, :, 0]
@@ -16,7 +16,7 @@ def ft_invert(array) -> array:
     return (invertArr)
 
 
-def ft_red(array) -> array:
+def ft_red(array) -> np.ndarray:
     """Only display red pixels"""
     # zSlice = slice(0,1)
     redFil = array.copy()
@@ -29,7 +29,7 @@ def ft_red(array) -> array:
     return (redFil)
 
 
-def ft_green(array) -> array:
+def ft_green(array) -> np.ndarray:
     """Only display green pixels"""
     # zSlice = slice(0,1)
     greenFil = array.copy()
@@ -42,7 +42,7 @@ def ft_green(array) -> array:
     return (greenFil)
 
 
-def ft_blue(array) -> array:
+def ft_blue(array) -> np.ndarray:
     """Only display blue pixels"""
     # zSlice = slice(0,1)
     blueFil = array.copy()
@@ -55,7 +55,7 @@ def ft_blue(array) -> array:
     return (blueFil)
 
 
-def ft_grey(array) -> array:
+def ft_grey(array) -> np.ndarray:
     """Combine the 3 canals (rgb) to create a grey one.
     the real formula is : L = 0.299*R + 0.587*G + 0.114*B"""
     greyFil = array.copy()
@@ -78,6 +78,7 @@ def main():
     ft_green(array)
     ft_blue(array)
     ft_grey(array)
+
 
 if (__name__ == "__main__"):
     main()
