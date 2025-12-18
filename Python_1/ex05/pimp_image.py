@@ -2,22 +2,6 @@ import matplotlib.pyplot as plt
 
 array = []
 
-# def ft_invert(array) -> array:
-#     print(array)
-#     tab = []
-#     for i, line in enumerate(array) :
-#         li = []
-#         for px in line:
-#             pxArr = []
-#             for color in px:
-#                 # print("prev",color)
-#                 color = 255 - color
-#                 # print("next",color)
-#                 pxArr.append(color)
-#             li.append(pxArr)
-#         tab.append(li)
-#     invertArr = np.array(tab)
-
 
 def ft_invert(array) -> array:
     """Inverts the color of the image received."""
@@ -178,3 +162,20 @@ def ft_grey(array) -> array:
 #     plt.imshow(invertArr)
 #     plt.show()
 #     return (invertArr)
+
+
+# def ft_invert(array) -> array:
+#     print(array)
+#     tab = []
+#     for i, line in enumerate(array) :
+#         li = []
+#         for px in line:
+#             pxArr = []
+#             for color in px:
+#                 # print("prev",color)
+#                 color = 255 - color
+#                 # print("next",color)
+#                 pxArr.append(color)
+#             li.append(pxArr)
+#         tab.append(li)
+#     invertArr = np.array(tab)
