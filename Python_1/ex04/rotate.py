@@ -4,6 +4,10 @@ import numpy as np
 
 
 def main():
+    """
+    This program load an image, square it and without using
+    the transpose function, transpose the array.
+    """
     arr = ft_load("animal.jpeg")
     if (arr is None):
         return (1)
