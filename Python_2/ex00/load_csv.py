@@ -1,21 +1,23 @@
-import numpy as np
-import csv
+import pandas as pd
 
 
-def load(path: str) -> np.ndarry:
-    arrList = []
-    with open("life_expectancy_years.csv") as file:
-        reader = csv.reader(file)
-        next(reader)
-        for line in reader:
-            arrList.append(line)
-    arr = np.array(arrList)
-    # print(arrList)
-    print("Loading dataset of dimensions ", arr.shape)
-    return (arr)
+def load(path: str):
+    try:
+        df = pd.read_csv(path)
+        print(f"Loading dataset of dimensions {df.shape}")
+        return (df.to_string(index=False))
+
+    except FileNotFoundError:
+        print(f"FileNotFoundError:[Errno 2] No such file or directory: {path}")
+    except UnicodeDecodeError:
+        print("UnicodeDecodeError: 'utf-8' codec can't decode"
+              "byte 0xff in position 0: invalid start byte")
+
+        return (None)
 
 
 def main():
+
     print(load("life_expectancy_years.csv"))
 
 
