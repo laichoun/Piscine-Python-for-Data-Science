@@ -60,7 +60,10 @@ def ft_grey(array) -> np.ndarray:
     the real formula is : L = 0.299*R + 0.587*G + 0.114*B"""
     greyFil = array.copy()
     print(greyFil)
-    greyFil2 = (greyFil[:, :, 0] + greyFil[:, :, 1] + greyFil[:, :, 2])/3
+    r = (1000/299)
+    g = (1000/587)
+    b = (1000/114)
+    greyFil2 = (greyFil[:, :, 0]/r + greyFil[:, :, 1]/g + greyFil[:, :, 2]/b)
 
     greyFil[:, :, 0] = greyFil2[:, :]
     greyFil[:, :, 1] = greyFil2[:, :]

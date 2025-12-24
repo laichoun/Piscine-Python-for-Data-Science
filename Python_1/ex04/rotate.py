@@ -16,7 +16,8 @@ def main():
     # 1 canal.
     cSlice = slice(0, 1)
     # intensity of the coulor chosen
-    zoomed = arr[ySlice, xSlice, cSlice]
+    # zoomed = arr[ySlice, xSlice, cSlice]
+    zoomed = arr[100:500, 450:850, 0:1]
     zoomed_gray = zoomed[:, :, 0]
     print(f"The shape of image is: {zoomed.shape} or {zoomed_gray.shape}")
     print(zoomed)

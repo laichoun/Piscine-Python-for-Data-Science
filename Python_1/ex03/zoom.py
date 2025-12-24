@@ -14,7 +14,7 @@ def zoom():
     plt.show() --> show the img
     """
 
-    arr = ft_load("animal.jpg")
+    arr = ft_load("animal.jpeg")
     if (arr is None):
         return
     print(arr)
