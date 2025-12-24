@@ -11,10 +11,10 @@ def main():
     arr = ft_load("animal.jpeg")
     if (arr is None):
         return (1)
-    ySlice = slice(100, 500)
-    xSlice = slice(450, 850)
-    # 1 canal.
-    cSlice = slice(0, 1)
+    # ySlice = slice(100, 500)
+    # xSlice = slice(450, 850)
+    # # 1 canal.
+    # cSlice = slice(0, 1)
     # intensity of the coulor chosen
     # zoomed = arr[ySlice, xSlice, cSlice]
     zoomed = arr[100:500, 450:850, 0:1]
