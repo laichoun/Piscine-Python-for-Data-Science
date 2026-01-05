@@ -3,9 +3,10 @@ import pandas as pd
 
 def load(path: str):
     try:
+        # print(pd.__version__)
         df = pd.read_csv(path)
         print(f"Loading dataset of dimensions {df.shape}")
-        return (df.to_string(index=False))
+        return (df)
 
     except FileNotFoundError:
         print(f"FileNotFoundError:[Errno 2] No such file or directory: {path}")

@@ -5,7 +5,7 @@ def load(path: str):
     try:
         df = pd.read_csv(path)
         print(f"Loading dataset of dimensions {df.shape}")
-        return (df.to_string(index=False))
+        return (df)
 
     except FileNotFoundError:
         print(f"FileNotFoundError:[Errno 2] No such file or directory: {path}")
