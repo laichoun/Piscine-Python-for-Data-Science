@@ -15,7 +15,7 @@ def load(path: str):
 
 
 def main():
-    print(load("life_expectancy_years.csv"))
+    print(load("population_total.csv"))
 
 
 if (__name__ == "__main__"):
