@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 from load_csv import load
 
 
@@ -30,6 +31,13 @@ def aff_pop():
     plt.plot(dfBelY, label="Belgium")
     plt.legend()
 
+    #get current axe
+    ax = plt.gca()
+    ax.yaxis.set_major_locator(ticker.MaxNLocator(4))
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: f"{int(x)}M"))
+    
+    ticks = list(range(1800, 2050, 40))
+    plt.xticks(ticks)
     plt.show()
 
 
