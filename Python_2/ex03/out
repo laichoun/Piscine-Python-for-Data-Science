@@ -1,0 +1,27 @@
+Loading dataset of dimensions (195, 252)
+Loading dataset of dimensions (195, 302)
+country
+Afghanistan              2140
+Angola                   6220
+Albania                 17.5k
+Andorra                 56.3k
+United Arab Emirates    73.1k
+                        ...  
+Samoa                    6660
+Yemen                    2640
+South Africa            13.1k
+Zambia                   3520
+Zimbabwe                 3770
+Name: 2027, Length: 195, dtype: object country
+Afghanistan             65.7
+Angola                  67.7
+Albania                 79.5
+Andorra                  NaN
+United Arab Emirates    75.0
+                        ... 
+Samoa                   71.4
+Yemen                   68.8
+South Africa            66.9
+Zambia                  65.2
+Zimbabwe                62.8
+Name: 2027, Length: 195, dtype: float64
