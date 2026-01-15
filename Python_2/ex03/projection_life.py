@@ -12,8 +12,8 @@ def projection_life():
     dfIncome.columns = dfIncome.columns.astype(int)
     dfExpLife.columns = dfExpLife.columns.astype(int)
 
-    dfIncome1900 = dfIncome[2027]
-    dfExpLife1900 = dfExpLife[2027]
+    dfIncome1900 = dfIncome[1900]
+    dfExpLife1900 = dfExpLife[1900]
 
     # dfIncome1900 = (
     #     dfIncome1900
@@ -27,8 +27,8 @@ def projection_life():
     newDf = pd.concat([dfIncome1900, dfExpLife1900], axis=1)
     newDf.columns=["GNP", "Expectancy life"]
     newDf.dropna(inplace=True)
-    subset = newDf[(newDf["GNP"] >= 7000) & (newDf["GNP"] <= 10000)]
-    print("SUB",subset)
+    # subset = newDf[(newDf["GNP"] >= 7000) & (newDf["GNP"] <= 10000)]
+    # print("SUB",subset)
     print(newDf.to_string())
 
     print("corr", newDf.corr())

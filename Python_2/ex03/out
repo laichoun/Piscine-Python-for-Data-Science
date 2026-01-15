@@ -1,27 +1,405 @@
 Loading dataset of dimensions (195, 252)
 Loading dataset of dimensions (195, 302)
 country
-Afghanistan              2140
-Angola                   6220
-Albania                 17.5k
-Andorra                 56.3k
-United Arab Emirates    73.1k
-                        ...  
-Samoa                    6660
-Yemen                    2640
-South Africa            13.1k
-Zambia                   3520
-Zimbabwe                 3770
-Name: 2027, Length: 195, dtype: object country
-Afghanistan             65.7
-Angola                  67.7
-Albania                 79.5
-Andorra                  NaN
-United Arab Emirates    75.0
+Afghanistan             1050
+Angola                   779
+Albania                 1270
+Andorra                 3620
+United Arab Emirates    3310
                         ... 
-Samoa                   71.4
-Yemen                   68.8
-South Africa            66.9
-Zambia                  65.2
-Zimbabwe                62.8
-Name: 2027, Length: 195, dtype: float64
+Samoa                   2090
+Yemen                   1320
+South Africa            1740
+Zambia                   957
+Zimbabwe                1110
+Name: 1900, Length: 195, dtype: int64 country
+Afghanistan             33.3
+Angola                  32.6
+Albania                 34.9
+Andorra                  NaN
+United Arab Emirates    35.4
+                        ... 
+Samoa                   27.4
+Yemen                   26.6
+South Africa            36.0
+Zambia                  34.3
+Zimbabwe                35.3
+Name: 1900, Length: 195, dtype: float64
+                                 GNP  Expectancy life
+country                                              
+Afghanistan                     1050             33.3
+Angola                           779             32.6
+Albania                         1270             34.9
+United Arab Emirates            3310             35.4
+Argentina                       5330             37.2
+Armenia                         1000             35.9
+Antigua and Barbuda             1470             33.7
+Australia                       7440             50.0
+Austria                         5340             41.5
+Azerbaijan                      1720             27.1
+Burundi                          520             32.0
+Belgium                         6910             46.7
+Benin                            996             34.9
+Burkina Faso                     595             31.4
+Bangladesh                      1130             21.2
+Bulgaria                        1860             40.1
+Bahrain                         3060             32.9
+Bahamas                         2810             34.9
+Bosnia and Herzegovina          1210             35.0
+Belarus                         1390             36.9
+Belize                          1130             26.6
+Bolivia                         1700             31.9
+Brazil                          1020             31.4
+Barbados                        1780             32.7
+Brunei                          2250             28.3
+Bhutan                           837             31.9
+Botswana                         663             35.4
+Central African Republic         709             33.8
+Canada                          5390             48.4
+Switzerland                     7690             47.5
+Chile                           3940             31.1
+China                           1130             32.0
+Cote d'Ivoire                    681             35.1
+Cameroon                        1140             30.0
+Congo, Dem. Rep.                 829             33.8
+Congo, Rep.                      864             32.8
+Colombia                        1270             33.4
+Comoros                          872             33.5
+Cape Verde                       965             36.0
+Costa Rica                      2150             35.0
+Cuba                            1970             34.9
+Cyprus                          2490             40.9
+Czech Republic                  4480             40.2
+Germany                         5530             43.8
+Djibouti                        1170             33.9
+Denmark                         5590             52.0
+Dominican Republic              1170             32.9
+Algeria                         1860             32.2
+Ecuador                         1280             33.7
+Egypt                           1760             33.9
+Eritrea                          740             31.6
+Spain                           3110             34.8
+Estonia                         2290             43.1
+Ethiopia                         610             29.7
+Finland                         3090             41.9
+Fiji                            1170             27.7
+France                          5330             45.3
+Micronesia, Fed. Sts.            624             26.0
+Gabon                            671             34.6
+United Kingdom                  8830             46.4
+Georgia                         1140             33.8
+Ghana                            820             29.5
+Guinea                           602             32.6
+Gambia                           978             36.9
+Guinea-Bissau                    687             30.3
+Equatorial Guinea                573             31.6
+Greece                          2290             40.8
+Grenada                         1530             38.2
+Guatemala                       1870             26.1
+Guyana                          2360             30.1
+Hong Kong, China                2260             34.9
+Honduras                        2030             33.9
+Croatia                         3190             34.9
+Haiti                           1620             30.9
+Hungary                         3120             37.3
+Indonesia                       1340             30.0
+India                           1110             20.1
+Ireland                         4450             49.2
+Iran                            1360             25.6
+Iraq                            1360             38.3
+Iceland                         2660             46.8
+Israel                          3110             33.6
+Italy                           3790             41.7
+Jamaica                         1080             38.0
+Jordan                          1660             34.9
+Japan                           2470             38.7
+Kazakhstan                      2790             28.7
+Kenya                           1320             27.1
+Kyrgyz Republic                 1160             25.5
+Cambodia                         491             37.1
+Kiribati                         682             25.4
+South Korea                     1190             25.8
+Kuwait                          2490             28.7
+Lao                             1190             31.5
+Lebanon                         2360             29.6
+Liberia                         1120             33.0
+Libya                           2800             36.4
+St. Lucia                       1290             28.0
+Sri Lanka                       2390             33.5
+Lesotho                          421             36.1
+Lithuania                       3100             42.6
+Luxembourg                      4250             47.8
+Latvia                          1840             46.2
+Morocco                         1230             33.0
+Moldova                         1370             32.1
+Madagascar                       957             32.4
+Maldives                         949             31.9
+Mexico                          2120             27.6
+North Macedonia                 1640             35.4
+Mali                             703             29.7
+Malta                           1850             41.4
+Myanmar                         1280             31.2
+Montenegro                      2130             37.3
+Mongolia                         840             30.8
+Mozambique                       469             35.0
+Mauritania                       734             35.3
+Mauritius                       1570             26.3
+Malawi                           402             29.8
+Malaysia                         951             30.6
+Namibia                         2020             36.8
+Niger                            745             31.8
+Nigeria                         1110             34.3
+Nicaragua                       2330             26.9
+Netherlands                     6170             48.4
+Norway                          3780             53.6
+Nepal                            922             35.0
+New Zealand                     7960             47.5
+Oman                            1300             34.6
+Pakistan                        1310             23.3
+Panama                          2410             34.0
+Peru                            1260             34.1
+Philippines                     1240             31.0
+Papua New Guinea                 814             37.1
+Poland                          3140             40.4
+North Korea                      360             26.0
+Portugal                        2410             35.8
+Paraguay                        2580             35.2
+Palestine                       1100             34.3
+Qatar                           2490             33.1
+Romania                          715             35.6
+Russia                          3500             30.8
+Rwanda                           554             24.3
+Saudi Arabia                    1060             35.0
+Sudan                            866             32.4
+Senegal                          831             28.1
+Singapore                       2560             33.7
+Solomon Islands                  546             24.6
+Sierra Leone                    1230             28.9
+El Salvador                     1720             29.4
+Somalia                          864             33.1
+Serbia                          3220             34.6
+South Sudan                      847             34.4
+Sao Tome and Principe           1160             29.8
+Suriname                        3180             33.6
+Slovak Republic                 3340             37.9
+Slovenia                        3340             36.6
+Sweden                          3860             52.3
+Eswatini                         817             33.1
+Seychelles                      1330             45.4
+Syria                           2140             32.9
+Chad                             698             34.0
+Togo                            1140             35.0
+Thailand                        1500             31.1
+Tajikistan                      1250             26.1
+Turkmenistan                    2300             24.0
+Timor-Leste                      719             34.0
+Tonga                            987             28.9
+Trinidad and Tobago             2160             38.9
+Tunisia                         1480             30.4
+Turkey                          1600             36.6
+Taiwan                          1250             29.5
+Tanzania                         630             33.2
+Uganda                           774             27.3
+Ukraine                         1870             37.8
+Uruguay                         3940             32.8
+United States                   9340             49.0
+Uzbekistan                       924             29.1
+St. Vincent and the Grenadines  1630             26.7
+Venezuela                       2150             33.2
+Vietnam                         1210             32.1
+Vanuatu                          872             25.8
+Samoa                           2090             27.4
+Yemen                           1320             26.6
+South Africa                    1740             36.0
+Zambia                           957             34.3
+Zimbabwe                        1110             35.3
+corr                       GNP  Expectancy life
+GNP              1.000000         0.658121
+Expectancy life  0.658121         1.000000
+duplicated? country
+Afghanistan                       False
+Angola                            False
+Albania                           False
+United Arab Emirates              False
+Argentina                         False
+Armenia                           False
+Antigua and Barbuda               False
+Australia                         False
+Austria                           False
+Azerbaijan                        False
+Burundi                           False
+Belgium                           False
+Benin                             False
+Burkina Faso                      False
+Bangladesh                        False
+Bulgaria                          False
+Bahrain                           False
+Bahamas                           False
+Bosnia and Herzegovina            False
+Belarus                           False
+Belize                            False
+Bolivia                           False
+Brazil                            False
+Barbados                          False
+Brunei                            False
+Bhutan                            False
+Botswana                          False
+Central African Republic          False
+Canada                            False
+Switzerland                       False
+Chile                             False
+China                             False
+Cote d'Ivoire                     False
+Cameroon                          False
+Congo, Dem. Rep.                  False
+Congo, Rep.                       False
+Colombia                          False
+Comoros                           False
+Cape Verde                        False
+Costa Rica                        False
+Cuba                              False
+Cyprus                            False
+Czech Republic                    False
+Germany                           False
+Djibouti                          False
+Denmark                           False
+Dominican Republic                False
+Algeria                           False
+Ecuador                           False
+Egypt                             False
+Eritrea                           False
+Spain                             False
+Estonia                           False
+Ethiopia                          False
+Finland                           False
+Fiji                              False
+France                            False
+Micronesia, Fed. Sts.             False
+Gabon                             False
+United Kingdom                    False
+Georgia                           False
+Ghana                             False
+Guinea                            False
+Gambia                            False
+Guinea-Bissau                     False
+Equatorial Guinea                 False
+Greece                            False
+Grenada                           False
+Guatemala                         False
+Guyana                            False
+Hong Kong, China                  False
+Honduras                          False
+Croatia                           False
+Haiti                             False
+Hungary                           False
+Indonesia                         False
+India                             False
+Ireland                           False
+Iran                              False
+Iraq                              False
+Iceland                           False
+Israel                            False
+Italy                             False
+Jamaica                           False
+Jordan                            False
+Japan                             False
+Kazakhstan                        False
+Kenya                             False
+Kyrgyz Republic                   False
+Cambodia                          False
+Kiribati                          False
+South Korea                       False
+Kuwait                            False
+Lao                               False
+Lebanon                           False
+Liberia                           False
+Libya                             False
+St. Lucia                         False
+Sri Lanka                         False
+Lesotho                           False
+Lithuania                         False
+Luxembourg                        False
+Latvia                            False
+Morocco                           False
+Moldova                           False
+Madagascar                        False
+Maldives                          False
+Mexico                            False
+North Macedonia                   False
+Mali                              False
+Malta                             False
+Myanmar                           False
+Montenegro                        False
+Mongolia                          False
+Mozambique                        False
+Mauritania                        False
+Mauritius                         False
+Malawi                            False
+Malaysia                          False
+Namibia                           False
+Niger                             False
+Nigeria                           False
+Nicaragua                         False
+Netherlands                       False
+Norway                            False
+Nepal                             False
+New Zealand                       False
+Oman                              False
+Pakistan                          False
+Panama                            False
+Peru                              False
+Philippines                       False
+Papua New Guinea                  False
+Poland                            False
+North Korea                       False
+Portugal                          False
+Paraguay                          False
+Palestine                         False
+Qatar                             False
+Romania                           False
+Russia                            False
+Rwanda                            False
+Saudi Arabia                      False
+Sudan                             False
+Senegal                           False
+Singapore                         False
+Solomon Islands                   False
+Sierra Leone                      False
+El Salvador                       False
+Somalia                           False
+Serbia                            False
+South Sudan                       False
+Sao Tome and Principe             False
+Suriname                          False
+Slovak Republic                   False
+Slovenia                          False
+Sweden                            False
+Eswatini                          False
+Seychelles                        False
+Syria                             False
+Chad                              False
+Togo                              False
+Thailand                          False
+Tajikistan                        False
+Turkmenistan                      False
+Timor-Leste                       False
+Tonga                             False
+Trinidad and Tobago               False
+Tunisia                           False
+Turkey                            False
+Taiwan                            False
+Tanzania                          False
+Uganda                            False
+Ukraine                           False
+Uruguay                           False
+United States                     False
+Uzbekistan                        False
+St. Vincent and the Grenadines    False
+Venezuela                         False
+Vietnam                           False
+Vanuatu                           False
+Samoa                             False
+Yemen                             False
+South Africa                      False
+Zambia                            False
+Zimbabwe                          False
