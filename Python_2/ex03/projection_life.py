@@ -6,9 +6,10 @@ import matplotlib.ticker as ticker
 
 
 def projection_life():
-    dfIncome = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+    dfIncome = load(
+        "income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
     dfExpLife = load("life_expectancy_years.csv")
-    
+
     dfIncome.columns = dfIncome.columns.astype(int)
     dfExpLife.columns = dfExpLife.columns.astype(int)
 
@@ -25,7 +26,7 @@ def projection_life():
     print(dfIncome1900, dfExpLife1900)
 
     newDf = pd.concat([dfIncome1900, dfExpLife1900], axis=1)
-    newDf.columns=["GNP", "Expectancy life"]
+    newDf.columns = ["GNP", "Expectancy life"]
     newDf.dropna(inplace=True)
     # subset = newDf[(newDf["GNP"] >= 7000) & (newDf["GNP"] <= 10000)]
     # print("SUB",subset)
@@ -34,7 +35,7 @@ def projection_life():
     print("corr", newDf.corr())
     print("duplicated?", newDf.duplicated().to_string())
 
-    newDf.plot(kind = 'scatter', x = 'GNP', y = 'Expectancy life')
+    newDf.plot(kind='scatter', x='GNP', y='Expectancy life')
     ax = plt.gca()
     ax.set_xlim(100, 10_000)
     ax.xaxis.set_major_locator(ticker.MaxNLocator(4))
@@ -42,7 +43,7 @@ def projection_life():
     plt.xlabel("Gross domestic product")
     plt.ylabel("Life Expectancy")
     plt.show()
-    
+
 
 def main():
     projection_life()
