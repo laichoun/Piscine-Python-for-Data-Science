@@ -4,8 +4,9 @@ from load_csv import load
 
 
 def formatage_K_M(x, pos):
+    print("tick:", x)
     if abs(x) < 1000:   # tolérance flottante
-        return "k"
+        return ("")
     if (x < 1_000_000):
         return (f"{x/1_000:.0f}k")
     else:
@@ -40,6 +41,8 @@ def aff_pop():
         .str.replace("m", "e6", regex=False)
         .astype(float)
     )
+
+    print("the min is : ", dfLuxY.min())
     print("dfLuxY N", dfLuxY)
     print("dfBelY", dfBelY)
 
