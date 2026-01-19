@@ -2,6 +2,12 @@ import pandas as pd
 
 
 def load(path: str):
+    """
+    Docstring for load
+
+    :param path: type str
+    Takes a path and return a dataFrame with the file's data
+    """
     try:
         df = pd.read_csv(path)
         print(f"Loading dataset of dimensions {df.shape}")

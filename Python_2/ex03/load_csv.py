@@ -2,6 +2,12 @@ import pandas as pd
 
 
 def load(path: str):
+    """
+    Docstring for load
+
+    :param path: type str
+    Takes a path and return a dataFrame with the file's data
+    """
     try:
         # print(pd.__version__)
         df = pd.read_csv(path)

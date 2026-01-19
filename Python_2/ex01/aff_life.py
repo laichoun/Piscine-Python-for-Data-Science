@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 
 
 def affCountryData():
+    """
+    Docstring for affCountryData
+    Show a graph of the life expectancy
+    years in Luxembourg
+    """
     df = load("life_expectancy_years.csv")
     print(df)
     # transform column country as an index

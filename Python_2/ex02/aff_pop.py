@@ -4,7 +4,14 @@ from load_csv import load
 
 
 def formatage_K_M(x, pos):
-    print("tick:", x)
+    """
+    Docstring for formatage_K_M
+
+    :param x: Description
+    :param pos: Description
+    Formatage of the Y axes
+    """
+    # print("tick:", x)
     if abs(x) < 1000:   # tolérance flottante
         return ("")
     if (x < 1_000_000):
@@ -14,6 +21,11 @@ def formatage_K_M(x, pos):
 
 
 def aff_pop():
+    """
+    Docstring for aff_pop
+    Display the population of 2 country
+    from 1800 - 2050
+    """
     df = load("population_total.csv")
     print(df)
     dataLux = df.loc["Luxembourg"]

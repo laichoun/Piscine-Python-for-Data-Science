@@ -6,6 +6,12 @@ import matplotlib.ticker as ticker
 
 
 def projection_life():
+    """
+    Docstring for projection_life
+    Show the income Gross Domestic Product per
+    country in 1900 regarding the Life Expectancy.
+    We can see a correlation between those datas
+    """
     dfIncome = load(
         "income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
     dfExpLife = load("life_expectancy_years.csv")
@@ -33,7 +39,7 @@ def projection_life():
     print(newDf.to_string())
 
     print("corr", newDf.corr())
-    print("duplicated?", newDf.duplicated().to_string())
+    # print("duplicated?", newDf.duplicated().to_string())
 
     newDf.plot(kind='scatter', x='GNP', y='Expectancy life')
     ax = plt.gca()
