@@ -1,5 +1,10 @@
+#!/usr/bin/python3
+from abc import ABC, abstractmethod
 
-class Character():
+class Character(ABC):
+	"""
+	Class Character
+	"""
 	print("test1")
 
 class Stark(Character):
@@ -7,7 +12,7 @@ class Stark(Character):
 
 
 def main():
-	print("Hello§")
+	p1 = Character()
 
 
 if (__name__ == "__main__"):
