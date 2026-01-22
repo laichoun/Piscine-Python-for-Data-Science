@@ -1,28 +1,34 @@
-from abc import ABC, abstractmethod
+# class A:
+#     def __init__(self):
+#         super().__init__()
+#         print("A init")
 
-class Vehicule(ABC):
-	
+# class B:
+#     def __init__(self):
+#         super().__init__()
+#         print("B init")
 
+# class C(A,B):
+#     def __init__(self):
+#         super().__init__()
+#         print("C init")
 
-# class Voiture:
-# 	nbvoiture = 0
-# 	def __init__(self, marque):
-# 		self.marque = marque
-# 		Voiture.nbvoiture += 1
-	
-# 	def afficherMarque(self):
-# 		print(f"la marque est : {self.marque}")
-
-
-# def main():
-# 	v01 = Voiture("Lambo")
-# 	v03 = Voiture("Porsche")
-# 	v02 = Voiture("Porsche")
-# 	v01.afficherMarque()
-# 	v02.afficherMarque()
-# 	print(Voiture.nbvoiture)
+# c = C()
 
 
+class A:
+    def __init__(self):
+        print("A init")
 
-if (__name__ == "__main__"):
-	main()
+class B:
+    def __init__(self):
+        print("B init")
+
+class C(A, B):
+    def __init__(self):
+        A.__init__(self)
+        B.__init__(self)
+        print("C init")
+        
+
+c = C()
