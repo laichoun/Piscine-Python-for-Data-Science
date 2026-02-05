@@ -19,7 +19,7 @@ class Baratheon(Character):
         return (f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})")
 
     def __str__(self):
-        return (self.__repr__)
+        return (self.__repr__())
 
 
 class Lannister(Character):
