@@ -1,15 +1,23 @@
 #!/usr/bin/python3
 
+def aff(arg):
+    for i in arg:
+        print (i)
+
 def sort(args):
     arg = list(args)
-    temp = 0
     for i in range(1, len(arg)):
-        print(arg[i])
+        print("arg i", arg[i], i)
+        poparg = arg.pop(i)
         for j in range(i-1, -1, -1):
-            print("print", arg[j])
-
-            
-    
+            print('pop arg is', poparg)
+            print("print arg j", arg[j])
+            if (arg[j] > poparg):   
+            #     print('pop', poparg)
+            #     print("arg j",arg[j], j)
+                arg.insert(j, poparg)
+            arg.insert(i, poparg)
+            aff(arg)
     return (arg)
 
 def ft_statistics(*args: any, **kwargs: any) -> None:
@@ -46,7 +54,7 @@ arg in the function.
 
 
 def main():
-    ft_statistics(1, 42, 360, 11, 64, toto="mean", tutu="median",
+    ft_statistics(1, 42,360,11,64, toto="mean", tutu="median",
                   tata="quartile")
     # print("-----")
     # ft_statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
