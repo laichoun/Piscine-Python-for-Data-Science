@@ -13,3 +13,5 @@ def my_func(planet):
 
 my_func("World")
 my_func("Pluto")
+
+https://github.com/semx2a/piscine-python/tree/main/py04/ex00
