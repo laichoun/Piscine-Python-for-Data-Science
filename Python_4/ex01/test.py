@@ -1,17 +1,14 @@
-def my_validator(func):
-    def my_wrapper(world):
-        print(f"Entering {func.__name__} with {world} argument")
-        if ("Pluto" == world):
-            print("Pluto is not a planet!")
-        else:
-            return func(world)
-    return my_wrapper
+def fac(n):
+    if (n == 1 or n == 0):
+        return (1)
+    else :
+        print("the fac is : ",n, n-1)
+        return (fac(n-1) * n)
 
-@my_validator
-def my_func(planet):
-    print(f"Hello, {planet}!")
 
-my_func("World")
-my_func("Pluto")
+def main():
+    print (fac(4))
 
-https://github.com/semx2a/piscine-python/tree/main/py04/ex00
+main()
+
+# https://github.com/semx2a/piscine-python/tree/main/py04/ex00
