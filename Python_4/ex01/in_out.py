@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
 def square(x):
+    """
+The function gives the square of a number
+    """
     if (isinstance(x, int) or isinstance(x, float)):
         sqrt = x ** 2
         return (sqrt)
@@ -9,6 +12,9 @@ def square(x):
 
 
 def pow(x):
+    """
+The function gives the power of the number by itselft
+    """
     if (isinstance(x, int) or isinstance(x, float)):
         pow = x ** x
         return (pow)
@@ -21,14 +27,19 @@ def outer(x, function):
 A closure is a function that captures variables from its outer scope
 and can continue to use them even after the outer function has
 finished executing.
+A closure is formed when :
+-A function is defined in another function(nested function)
+-The inner function references variables from the outer function
+-The outer function returns the inner function
 nonlocal is used to modify the enclosing scope inside an inner function
     """
     count = 0
+
     def inner():
         nonlocal count, x
         # print(count)
         x = function(x)
-        count +=1
+        count += 1
         return (x)
     return inner
 

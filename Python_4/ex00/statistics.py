@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
-
 def aff(arg):
+    """
+Function for the display. Takes as argument the list and prints each value
+    """
     for i in arg:
         print(i)
 
