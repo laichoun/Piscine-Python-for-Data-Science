@@ -45,7 +45,6 @@ nonlocal is used to modify the enclosing scope inside an inner function
 
 
 def main():
-    print("hello")
     my_counter = outer(3, square)
     print(my_counter())
     print(my_counter())
