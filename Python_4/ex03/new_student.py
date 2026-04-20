@@ -1,3 +1,40 @@
 #!/usr/bin/python3
 
-print("hello")
+import random
+import string
+from dataclasses import dataclass, field
+
+
+def generate_id() -> str:
+    return "".join(random.choices(string.ascii_lowercase, k=15))
+
+
+@dataclass()
+class Student:
+    name: str
+    surname: str
+    active: bool = field(default=True, init=False)
+    id: str = field(init=False, default_factory=generate_id)
+    login: str = field(init=False)
+
+    def __post_init__(self):
+        self.login = self.name[:1] + self.surname[:7]
+
+
+def main():
+    student = Student("Lalla", surname="Aichouni")
+    student2 = Student(name="Edward", surname="agle", id="ffgfg")
+    student3 = Student(name="Edward", surname="agle")
+    student4 = Student(name="Edward", surname="agle")
+    student5 = Student(name="Edward", surname="agle")
+    student6 = Student(name="Edward", surname="agle")
+    print(student)
+    print(student2)
+    print(student3)
+    print(student4)
+    print(student5)
+    print(student6)
+
+
+if (__name__ == "__main__"):
+    main()
