@@ -22,7 +22,7 @@ state of the captured variables across calls
     def callLimiter(function):
 
         def limit_function(*args, **kwds):
-            nonlocal count, limit
+            nonlocal count
             if (count < limit):
                 function(*args, **kwds)
             else:
